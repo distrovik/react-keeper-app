@@ -1,8 +1,12 @@
-function Note(prop) {
+function Note(props) {
+  function handleClick() {
+    props.onDelete(props.id);
+  }
+
   return (
-    <div className="note">
-      <h1>{prop.title}</h1>
-      <p>{prop.content}</p>
+    <div className="note" onDoubleClick={handleClick}>
+      <h1>{props.title}</h1>
+      <p>{props.content}</p>
     </div>
   );
 }

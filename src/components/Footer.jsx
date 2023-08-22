@@ -1,11 +1,8 @@
-function Footer () {
-
-    const time = new Date()
-
- return (
+function Footer() {
+  return (
     <footer>
-        <p>MistaV's copyright {time.getFullYear()}</p>
+      <p>V's ⓒ {new Date().getFullYear()}</p>
     </footer>
- )
+  );
 }
 export default Footer;
