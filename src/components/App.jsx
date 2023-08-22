@@ -1,7 +1,6 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import Note from "./Note";
-import NoteDB from "../noteDB";
 import NewNote from "./NewNote";
 import { useState } from "react";
 
@@ -37,17 +36,8 @@ function App() {
           />
         );
       })}
-      {NoteDB.map((note) => (
-        <Note
-          key={note.key}
-          title={note.title}
-          content={note.content}
-          onDelete={deleteNote}
-        />
-      ))}
       <Footer />
     </div>
   );
 }
-
 export default App;
